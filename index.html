@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bamba Babou | Engineering Portfolio</title>
+    <style>
+        /* --- CSS VARIABLES --- */
+        :root {
+            --primary: #2563eb;       /* Professional Blue */
+            --secondary: #1e293b;     /* Dark Slate */
+            --accent: #f59e0b;        /* Subtle Orange (like DeWalt tools) */
+            --text-main: #333;
+            --text-light: #666;
+            --bg-light: #f8fafc;
+            --white: #ffffff;
+        }
+
+        /* --- GLOBAL RESET --- */
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        
+        body {
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-main);
+            background-color: var(--bg-light);
+            scroll-behavior: smooth;
+        }
+
+        /* --- NAVIGATION --- */
+        nav {
+            background: var(--white);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            padding: 1rem 0;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .nav-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--secondary);
+            text-decoration: none;
+        }
+
+        .nav-links a {
+            margin-left: 20px;
+            text-decoration: none;
+            color: var(--text-light);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover { color: var(--primary); }
+
+        /* --- HERO / INTRO SECTION --- */
+        .hero {
+            background: var(--white);
+            padding: 4rem 0;
+            text-align: center;
+            border-bottom: 1px solid #eee;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            color: var(--secondary);
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--text-light);
+            max-width: 700px;
+            margin: 0 auto 2rem auto;
+        }
+
+        .bio-box {
+            background: var(--bg-light);
+            padding: 2rem;
+            border-radius: 8px;
+            text-align: left;
+            margin-top: 2rem;
+            border-left: 5px solid var(--primary);
+        }
+
+        /* --- PROJECT SECTIONS --- */
+        .section-title {
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            color: var(--secondary);
+            border-bottom: 2px solid var(--primary);
+            display: inline-block;
+            padding-bottom: 0.5rem;
+        }
+
+        .project-section {
+            padding: 4rem 0;
+            background: var(--white);
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+        }
+
+        .project-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            margin-bottom: 2rem;
+        }
+
+        .project-meta {
+            font-weight: bold;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        .project-description {
+            max-width: 100%;
+            font-size: 1.05rem;
+        }
+
+        /* --- PHOTO GRID --- */
+        .photo-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .card {
+            background: var(--white);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            transition: transform 0.2s;
+        }
+
+        .card:hover { transform: translateY(-3px); }
+
+        .card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-bottom: 1px solid #eee;
+        }
+
+        .card-caption {
+            padding: 1rem;
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
+
+        /* --- CONTACT FOOTER --- */
+        footer {
+            background: var(--secondary);
+            color: var(--white);
+            padding: 3rem 0;
+            text-align: center;
+        }
+
+        footer p { margin-bottom: 0.5rem; }
+        footer a { color: var(--accent); text-decoration: none; }
+
+        /* --- RESPONSIVE --- */
+        @media (max-width: 768px) {
+            .nav-content { flex-direction: column; gap: 1rem; }
+            .hero h1 { font-size: 2rem; }
+            .project-header { flex-direction: column; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="container nav-content">
+            <a href="#" class="logo">Bamba Babou</a>
+            <div class="nav-links">
+                <a href="#intro">About</a>
+                <a href="#logan">Logan Library</a>
+                <a href="#welsh">Welsh Fountain</a>
+                <a href="#rail">Rail Park</a>
+                <a href="#swim">Swim Philly</a>
+                <a href="#other">Other Work</a>
+            </div>
+        </div>
+    </nav>
+
+    <header id="intro" class="hero">
+        <div class="container">
+            <img src="profile_pic.jpg" alt="Bamba Babou" style="width: 150px; height: 150px; border-radius: 50%; object-fit: cover; margin-bottom: 1rem; border: 3px solid var(--primary);">
+            <h1>Hi, I'm Bamba.</h1>
+            <p>Student at Rensselaer Polytechnic Institute (RPI) and Fabricator from TinyWPA.</p>
+            
+            <div class="bio-box">
+                <p>After beginning as an intern through my high school in 2022, I got hired as a fabrication intern by TinyWPA to continue developing my skills. I started off with smaller responsibilities like rough cut milling, sanding, and less detailed finishing.</p>
+                <br>
+                <p>Eventually, I progressed to aiding in leading major projects in the Summer of 2025, such as playful learning structures at Logan Library in Philadelphia.</p>
+            </div>
+        </div>
+    </header>
+
+    <section id="logan" class="project-section">
+        <div class="container">
+            <span class="project-meta">Summer '25 | Leadership & Fabrication</span>
+            <h2 class="section-title">Logan Library</h2>
+            <div class="project-description">
+                <p>Co-led design and construction efforts for community projects. Fabricated 15 structural frames and prepared 250+ wood components for assembly. Co-directed community build sessions, guiding interns and summer camp participants through hands-on construction tasks.</p>
+            </div>
+
+            <div class="photo-grid">
+                <div class="card">
+                    <img src="logan_prototype.jpg" alt="Prototype Phase" onerror="this.src='https://via.placeholder.com/400x300?text=Upload+logan_prototype.jpg'">
+                    <div class="card-caption">Prototype Phase: Strength and weight testing frames.</div>
+                </div>
+                <div class="card">
+                    <img src="logan_assembly.jpg" alt="Assembly" onerror="this.src='https://via.placeholder.com/400x300?text=Upload+logan_assembly.jpg'">
+                    <div class="card-caption">The beginnings: Clamping and assembling frames with the team.</div>
+                </div>
+                <div class="card">
+                    <img src="logan_finished.jpg" alt="Finished Project" onerror="this.src='https://via.placeholder.com/400x300?text=Upload+logan_finished.jpg'">
+                    <div class="card-caption">Finished Project: "Pollination in Logan" with seating and interactive elements.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="welsh" class="project-section" style="background-color: #fafafa;">
+        <div class="container">
+            <span class="project-meta">Summer '23 & '24 | Prototyping & Installation</span>
+            <h2 class="section-title">Welsh Fountain</h2>
+            <div class="project-description">
+                <p>Worked on prototyping and installation of the "Scan a Raindrop" structure. Involved creating models, fabricating steps, and installing the blue wave-like structures at the John Welsh Memorial Fountain.</p>
+            </div>
+
+            <div class="photo-grid">
+                <div class="card">
+                    <img src="welsh_model.jpg" alt="Scale Model" onerror="this.src='https://via.placeholder.com/400x300?text=Upload+welsh_model.jpg'">
+                    <div class="card-caption">Initial scale modeling and prototyping.</div>
+                </div>
+                <div class="card">
+                    <img src="welsh_stairs.jpg" alt="Stair Fabrication" onerror="this.src='https://via.placeholder.com/400x300?text=Upload+welsh_stairs.jpg'">
+                    <div class="card-caption">Fabricating the blue step structures.</div>
+                </div>
+                <div class="card">
+                    <img src="welsh_install.jpg" alt="Installation" onerror="this.src='https://via.placeholder.com/400x300?text=Upload+welsh_install.jpg'">
+                    <div class="card-caption">Final installation at the park.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="rail" class="project-section">
+        <div class="container">
+            <span class="project-meta">Summer '25 | Restoration</span>
+            <h2 class="section-title">Rail Park Renovation</h2>
+            <div class="project-description">
+                <p>Due to unforeseen and unfortunate circumstances, one of the seating arrangements at the Rail Park in Center City, Philadelphia, caught fire, and the ending portion was unusable. TinyWPA was tasked with replacing the charred slats. I was charged with remaking the attachment slits on each piece and aided in the renovation.</p>
+            </div>
+
+            <div class="photo-grid">
+                <div class="card">
+                    <img src="rail_fire.jpg" alt="Before Restoration" onerror="this.src='https://via.placeholder.com/400x300?text=Upload+rail_fire.jpg'">
+                    <div class="card-caption">Replacing the burned framing underneath the slats.</div>
+                </div>
+                <div class="card">
+                    <img src="rail_progress.jpg" alt="Work in Progress" onerror="this.src='https://via.placeholder.com/400x300?text=Upload+rail_progress.jpg'">
+                    <div class="card-caption">Installing new slats and adding backrest skeletons.</div>
+                </div>
+                <div class="card">
+                    <img src="rail_final.jpg" alt="Final Result" onerror="this.src='https://via.placeholder.com/400x300?text=Upload+rail_final.jpg'">
+                    <div class="card-caption">The finished product after renovation.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="swim" class="project-section" style="background-color: #fafafa;">
+        <div class="container">
+            <span class="project-meta">Summer '23 & '25 | Civic Design</span>
+            <h2 class="section-title">Swim Philly</h2>
+            <div class="project-description">
+                <p>Swim Philly is a project that TinyWPA started in 2023 in collaboration with the city of Philadelphia to make pools in underserved neighborhoods look more welcoming and inviting. We contributed coroplast figures on fences and installed seating areas to bring families together.</p>
+            </div>
+
+            <div class="photo-grid">
+                <div class="card">
+                    <img src="swim_internal.jpg" alt="Internal Structure" onerror="this.src='https://via.placeholder.com/400x300?text=Upload+swim_internal.jpg'">
+                    <div class="card-caption">Building the internal structure of the island seating.</div>
+                </div>
+                <div class="card">
+                    <img src="swim_transport.jpg" alt="Transport" onerror="this.src='https://via.placeholder.com/400x300?text=Upload+swim_transport.jpg'">
+                    <div class="card-caption">Delivery of components to the job site.</div>
+                </div>
+                <div class="card">
+                    <img src="swim_final.jpg" alt="J. Finnegan Pool" onerror="this.src='https://via.placeholder.com/400x300?text=Upload+swim_final.jpg'">
+                    <div class="card-caption">Final look of the heart-shaped deck at J. Finnegan Pool.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="other" class="project-section">
+        <div class="container">
+            <h2 class="section-title">Other Work</h2>
+            <div class="photo-grid">
+                
+                <div class="card">
+                    <img src="other_malcolm.jpg" alt="Malcolm X Park" onerror="this.src='https://via.placeholder.com/400x300?text=Upload+other_malcolm.jpg'">
+                    <div class="card-caption">
+                        <strong>Malcolm X Park (Summer '25):</strong> Prototyped and fabricated top steps for a circular pyramid sitting structure with pentagonal supports.
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="other_jump.jpg" alt="Vertical Jump Test" onerror="this.src='https://via.placeholder.com/400x300?text=Upload+other_jump.jpg'">
+                    <div class="card-caption">
+                        <strong>Fred Stokes Commemoration (Summer '23):</strong> Designed and assembled a vertical jump test activity inspired by the NBA combine.
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="other_bench.jpg" alt="Bench Restoration" onerror="this.src='https://via.placeholder.com/400x300?text=Upload+other_bench.jpg'">
+                    <div class="card-caption">
+                        <strong>Bench Revival:</strong> A 6-month restoration project replacing slats, polishing, and repainting a community bench.
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="other_mantua.jpg" alt="Mantua Fixture" onerror="this.src='https://via.placeholder.com/400x300?text=Upload+other_mantua.jpg'">
+                    <div class="card-caption">
+                        <strong>Did You Know: Mantua (Spring '24):</strong> Prototyped octagonal shapes and typography for a light fixture.
+                    </div>
+                </div>
+
+                 <div class="card">
+                    <img src="other_cornhole.jpg" alt="Cornhole Sets" onerror="this.src='https://via.placeholder.com/400x300?text=Upload+other_cornhole.jpg'">
+                    <div class="card-caption">
+                        <strong>Cornhole Sets (Summer '24):</strong> Produced two sets for a festival in front of the Philadelphia Art Museum.
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <h2>Get in Touch</h2>
+            <p><strong>Phone:</strong> 215-337-5650</p>
+            <p><strong>Email:</strong> <a href="mailto:Bamba.babou905@gmail.com" style="color: #fff; text-decoration: underline;">Bamba.babou905@gmail.com</a></p>
+            <p><strong>Location:</strong> Philadelphia, PA</p>
+            <p>&copy; 2025 Bamba Babou. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
